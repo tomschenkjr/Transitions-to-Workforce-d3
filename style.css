@@ -1,0 +1,187 @@
+/* Link colors */
+a:link {
+	color:#333;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+a:visited {color:#333;}
+a:hover {color:#333;}
+a:active {color:#333;}
+
+/* Start Class IDs for title, authors, and fonts in columns*/
+#nav{
+	width: 1368px;
+	border-bottom: 5px solid #333;
+	font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans", Verdana, Arial, sans-serif;
+	font-size: 1em;
+	color: #333;
+}
+
+#nav a{
+	text-decoration: none;
+	border-bottom: none;
+	margin: 0px 5px 0px 5px;
+}
+
+#nav a:hover{
+	border-top: 4px solid;
+}
+
+#nav ul{
+	list-style-type: none;
+	margin: 3px 0px 6px 20px;
+	padding: 0px;
+	text-decoration: none;
+}
+
+#nav li{
+	display:inline;
+	text-decoration: none;
+}
+
+#title{
+	font-family: "Futura","Futura2-Normal","Univers","Helvetica","Arial",sans-serif;
+	font-weight: 600;
+	font-size: 45px;
+	padding-left: 20px;
+	margin: 0px;
+}
+
+#authors{
+	font-family: "Futura","Futura2-Normal","Univers","Futura","Helvetica","Arial",sans-serif;
+	font-weight: 550;
+	font-size: 30px;
+	padding-left: 20px;
+}
+
+/*Gives the chord/Circos diagram the correct coloring*/
+#chart {
+  font: 9px "Univers","Futura","Helvetica","Arial",sans-serif;
+  padding: 20px 20px 20px 20px;
+  position: absolute;
+  left: -90%;
+  top: 12%;
+  z-index:100;	/* Must be above all other layers */
+}
+
+.chord path {
+  fill-opacity: .67;
+}
+
+#venn {
+	font: 10px: "Univers","Futura","Helvetica","Arial",sans-serif;
+ 	padding: 0px;
+ 	/*padding: 10px 0 10px 0;*/
+ 	margin: 0px;
+}
+
+#body{
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 13px;
+	padding-left: 8px;
+	margin: 0px;
+}
+
+#references{
+	position: relative;
+	top: 700px;
+}
+
+.footnote{
+	font-size: 10px;
+	color: #000;
+	text-decoration: none;
+	margin: 0px;
+}
+
+/* Start of columns, set width with .colmask. */
+.colmask{
+	width: 1368px;
+	clear: both;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+/* Backgrounds for columns */
+.colmid{ 
+	right: 20%;
+	float: left;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #000;	/* Draws border above footnote. Only need one border-bottom */
+}
+.colin{
+	right: 20%;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.colwu{ 
+	right: 20%;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.colleft{ 
+	right: 20%;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+/* Actual format for columns */
+.col1{
+   width: 19%;
+   left: 101%;
+   padding: 0px 0px 16em 0px;	/* Gives room for references in the third column */
+   overflow: hidden;
+   float: left;
+   position: relative;
+}
+.col2{
+	width: 19%;
+	left: 62%;
+	padding: 0px 0px 1em 0px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.col3{
+	width: 19%;
+	left: 84%;
+	padding: 0px 0px 1em 0px;
+	overflow: visible;
+	float: left;
+	position: relative;
+}
+.col4{
+	width: 19%;
+	left: 86%;
+	padding: 0px 0px 1em 0px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.col5{
+	width: 19%;
+	left: 86%;
+	padding: 0px 0px 1em 0px;
+	overflow: visible;
+	float: left;
+	position: relative;
+}
+.footer{
+   font-size: 10px;
+   width: 100%;
+   left: 0%;
+   margin: 0px;
+   padding-bottom: 10px;
+}
+.header{
+   clear: both;
+   float: left;
+   position: relative;
+   border-bottom: #000 1px solid;
+}
