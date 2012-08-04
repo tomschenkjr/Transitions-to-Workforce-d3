@@ -13,10 +13,6 @@ chord.js
 --------
 Contains the d3.js javascript code to display the main diagram. References to the d3.js installation available on GitHub.
 
-simple-diagram.png
-------------------
-A simple diagram illustrating the chord/Circos diagram. Ultimately, I would like to replace this with either javascript or SVG.
-
 style.css
 ---------
 Stylesheet for the HTML file, some portions of the stylesheet help format the chord/Circos diagram.
