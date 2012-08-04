@@ -1,4 +1,7 @@
-/* Link colors */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+/* Link colors 
+==============*/
 a:link {
 	color:#333;
 	text-decoration: none;
@@ -9,9 +12,11 @@ a:visited {color:#333;}
 a:hover {color:#333;}
 a:active {color:#333;}
 
-/* Start Class IDs for title, authors, and fonts in columns*/
+/* Start Class IDs for title, authors, and fonts in columns
+===========================================================*/
 #nav{
-	width: 1368px;
+	width: 100%;
+	min-width: 1400px;
 	border-bottom: 5px solid #333;
 	font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans", Verdana, Arial, sans-serif;
 	font-size: 1em;
@@ -77,19 +82,28 @@ a:active {color:#333;}
 }
 
 #body{
-	font-family: "Helvetica","Arial",sans-serif;
+	font-family: "Open Sans",sans-serif;
 	font-size: 13px;
+	font-weight: 400;
 	padding-left: 8px;
 	margin: 0px;
+}
+
+.subhead{ 
+	font-size:14px;
+	font-weight: bold;
 }
 
 #references{
 	position: relative;
 	top: 700px;
+	font-size:14px;
+	font-weight: bold;
 }
 
 .footnote{
 	font-size: 10px;
+	font-weight: 400;
 	color: #000;
 	text-decoration: none;
 	margin: 0px;
@@ -157,8 +171,8 @@ a:active {color:#333;}
 	position: relative;
 }
 .col4{
-	width: 19%;
-	left: 86%;
+	width: 18%;
+	left: 85%;
 	padding: 0px 0px 1em 0px;
 	overflow: hidden;
 	float: left;
