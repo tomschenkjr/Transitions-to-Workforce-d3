@@ -60,13 +60,14 @@ a:active {color:#333;}
 	padding-left: 20px;
 }
 
-/*Gives the chord/Circos diagram the correct coloring*/
+/* Formats for SVG Diagrams on webpage
+====================================== */
 #chart {
   font: 9px "Univers","Futura","Helvetica","Arial",sans-serif;
   padding: 20px 20px 20px 20px;
   position: absolute;
-  left: -90%;
-  top: 12%;
+  left: -160%;
+  top: 0%;
   z-index:100;	/* Must be above all other layers */
 }
 
@@ -81,6 +82,8 @@ a:active {color:#333;}
  	margin: 0px;
 }
 
+/* Formatting for columns
+========================= */
 #body{
 	font-family: "Open Sans",sans-serif;
 	font-size: 13px;
@@ -96,7 +99,7 @@ a:active {color:#333;}
 
 #references{
 	position: relative;
-	top: 700px;
+	top: 875px;
 	font-size:14px;
 	font-weight: bold;
 }
@@ -111,7 +114,7 @@ a:active {color:#333;}
 
 /* Start of columns, set width with .colmask. */
 .colmask{
-	width: 1368px;
+	width: 1680px;
 	clear: both;
 	float: left;
 	overflow: hidden;

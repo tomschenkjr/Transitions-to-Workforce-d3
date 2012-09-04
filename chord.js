@@ -42,16 +42,16 @@ var chord = d3.layout.chord()
     [59,14,43,481,1454,394,1285,217,291,714,75,242,24,631,761,1657,155,793,282,311,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ]);
 
-var width = 700,
-    height = 700,
-    innerRadius = Math.min(width, height) * .41,
-    outerRadius = innerRadius * 1.1;
+var width = 1300,
+    height = 910,
+    innerRadius = width * .22,
+    outerRadius = innerRadius * 1.05;
 
 var fill = d3.scale.ordinal()
     .domain(d3.range(4))
     .range(["#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#787678","#ed1c24","#991b20","#972a67","#6e398d","#856699","#5256a6","#30a2d3","#63bdcf","#4d8693","#78c27f","1b7c3e","#4db957","#85a23d","#bbb532","#f1eb18","#f09221","#c64d27"])
 
-var array = ["Agriculture", "Mining", "Utilities", "Construction", "Manufacturing", "Wholesale Trade", "Retail Trade", "Transportation", "Information Technology", "Finance and Insurance", "Real Estate", "Professional/Scientific/Technical", "Management", "Administrative/Support/Waste Management/Remediation", "Educational Services", "Health Care and Social Assistance", "Arts/Entertainment and Recreation", "Accomodation and Food Services", "Other Service", "Public Administration", "Agriculture and Construction", "Arts/AV/Technology/Communication", "Business Management and Administration", "Education", "Finance", "Government and Public Administration", "Health Science", "Hospitality and Tourism", "Human Services", "Information Technology", "Law/Public Safety/Corrections/Security", "Manufacturing", "Marketing", "STEM", "Transportation/Distribution/Logistics", "College Parallel"]
+var clusters = ["Agriculture", "Mining", "Utilities", "Construction", "Manufacturing", "Wholesale Trade", "Retail Trade", "Transportation", "Information Technology", "Finance & Insurance", "Real Estate", "Professional/Scientific/Tech.", "Management", "Admin./Support/Waste Mgmt./Remediation", "Educational Services", "Health Care & Social Assistance", "Arts/Entertainment & Recreation", "Accomodation & Food Services", "Other Service", "Public Administration", "Agriculture", "Architecture & Construction", "Arts/AV Tech./Communication", "Business Management & Admin.", "Education", "Finance", "Government & Public Admin.", "Health Science", "Hospitality & Tourism", "Human Services", "Information Technology", "Law/Public Safety/Corrections/Security", "Manufacturing", "Marketing", "STEM", "Transportation/Distribution/Logistics", "College Parallel"];
 
 var svg = d3.select("#chart")
   .append("svg")
@@ -100,19 +100,23 @@ ticks.append("text")
     })
     .text(function(d) { return d.label; });
 
-// An attempt to add labels
-//  g.append("svg:text")
-//  .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-//  .attr("dy", ".35em")
-//  .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
-// .attr("transform", function(d) {
-//   return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
-//       + "translate(" + (r0 + 26) + ")"
-//       + (d.angle > Math.PI ? "rotate(180)" : "");
-// })
-// .text(function(d) { return d.label; });
-//    "Agriculture", "Mining", "Utilities", "Construction", "Manufacturing", "Wholesale Trade", "Retail Trade", "Transportation", "Information Technology", "Finance and Insurance", "Real Estate", "Professional/Scientific/Technical", "Management", "Administrative/Support/Waste Management/Remediation", "Educational Services", "Health Care and Social Assistance", "Arts/Entertainment and Recreation", "Accomodation and Food Services", "Other Service", "Public Administration", "Agriculture and Construction", "Arts/AV/Technology/Communication", "Business Management and Administration", "Education", "Finance", "Government and Public Administration", "Health Science", "Hospitality and Tourism", "Human Services", "Information Technology", "Law/Public Safety/Corrections/Security", "Manufacturing", "Marketing", "STEM", "Transportation/Distribution/Logistics", "College Parallel"
+var label = svg.append("g")
+  .selectAll("g")
+    .data(chord.groups)
+  .enter().append("g")
 
+label.append("text")
+    .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+    .attr("dy", ".35em")
+    .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
+    .attr("transform", function(d) {
+      return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+          + "translate(" + (innerRadius + 50) + ")"
+          + (d.angle > Math.PI ? "rotate(180)" : "");
+    })
+    .text(function(d) { return clusters[d.index]; });
+    // .on("mouseover", fade(.1))
+    // .on("mouseout", fade(1));
 
 svg.append("g")
     .attr("class", "chord")
@@ -130,16 +134,6 @@ function groupTicks(d) {
     return {
       angle: v * k + d.startAngle,
       label: i % 5 ? null : v
-    };
-  });
-}
-
-function groupLabel(d) {
-  var m = (d.endAngle - d.startAngle) / d.value;
-  return d3.range(0, d.value, 150).map(function(v, i) {
-    return {
-      angle: m * k + d.startAngle,
-      label: i % 5 ? null : m
     };
   });
 }

@@ -1,28 +1,35 @@
 Introduction
 ============
-The objective of this project is to create an interative web page showing the relationships between community college major and employment. The design is based on a [static poster] created using [Circos] as the primary image. The left side of the diagram represents the various community college majors aggregated by the career clusters. The right side of the diagram represents the two-digit NAICS codes. ["Measuring Transitions into the Workforce as a Form of Accountability"] explains the methodology behind the approach. The main diagram was created using [d3.js] [chord diagram]. The ultimate goal is to display everything using style sheets, javascript, or svg.
+This is the source code used to create the principal diagram displayed in ["Measuring Transitions into the Workforce as a Form of Accountability"]. 
+The objective of this project is to create an interative web page showing the relationships between community college major and employment. The design is based on a [static poster] created using [Circos] as the primary image. The left side of the diagram represents the various community college majors aggregated by the career clusters. The right side of the diagram represents the two-digit NAICS codes. ["Measuring Transitions into the Workforce as a Form of Accountability"] explains the methodology behind the approach. The main diagram was created using [d3.js] [chord diagram]. You can view the current demo in my [sandbox].
+
+Requirements
+============
+
+You will need a web browser with an internet connection to view the output. The browser needs to fully support the Scalable Vector Graphic (SVG) format, including Safari, Chrome, and Firefox. Unfortunately, Internet Explorer (including version 9) is not supported. You do not need to download d3.js library, but do need an internet connection to generate the image.
+
 
 Files
 =====
 
 visualizing-transitions.html
 ----------------------------
-The HTML file for display. It contains the SVG code to display the Venn diagram in the webpage.
-
+The primary file which is displayed in the browser. This file contains three SVG images. The script which generates the center image is *not* included in this file, instead, see chord.js. The spacing in the center is created through dozens of white "<div>" markers.
+ 
 chord.js
 --------
-Contains the d3.js javascript code to display the main diagram. References to the d3.js installation available on GitHub.
+This file contains the code which generates the center image.
 
 style.css
 ---------
-Stylesheet for the HTML file, some portions of the stylesheet help format the chord/Circos diagram.
+The stylesheet for visualizing-transitions.html and chord.js (formats the diagram's labels).
+
 
 Contact
 =======
 You can contact the original author on the GitHub, at tomschenkjr@gmail.com, or on Twitter @tomschenkjr.
 
-[static poster]: http://tomschenkjr.files.wordpress.com/2009/10/visualizing-transitions-poster-copy1.pdf
-[Circos]: http://circos.ca/
 [d3.js]: http://d3js.org/
 [chord diagram]: http://mbostock.github.com/d3/ex/chord.html
+[sandbox]: http://tomschenkjr.net/sandbox/visualizing-transitions.html
 ["Measuring Transitions into the Workforce as a Form of Accountability"]: http://www3.airweb.org/images/irapps32.pdf
