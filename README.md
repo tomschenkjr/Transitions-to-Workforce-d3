@@ -24,6 +24,10 @@ style.css
 ---------
 The stylesheet for visualizing-transitions.html and chord.js (formats the diagram's labels).
 
+getuser.php
+-----------
+A PHP script that queries a MySQL table to retrieve information about a particular major. The PHP script is called by a dropdown menu in HTML document.
+
 
 Contact
 =======

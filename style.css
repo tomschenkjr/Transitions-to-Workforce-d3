@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,900)
 
 /* Link colors 
 ==============*/
@@ -18,7 +19,7 @@ a:active {color:#333;}
 	width: 100%;
 	min-width: 1400px;
 	border-bottom: 5px solid #333;
-	font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans", Verdana, Arial, sans-serif;
+	font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans", "Verdana", "Lato", "sans-serif";
 	font-size: 1em;
 	color: #333;
 }
@@ -46,7 +47,7 @@ a:active {color:#333;}
 }
 
 #title{
-	font-family: "Futura","Futura2-Normal","Univers","Helvetica","Arial",sans-serif;
+	font-family: "Univers", "Helvetica", "Lato", "sans-serif";
 	font-weight: 600;
 	font-size: 45px;
 	padding-left: 20px;
@@ -54,7 +55,7 @@ a:active {color:#333;}
 }
 
 #authors{
-	font-family: "Futura","Futura2-Normal","Univers","Futura","Helvetica","Arial",sans-serif;
+	font-family: "Univers", "Helvetica", "Lato", "sans-serif";
 	font-weight: 550;
 	font-size: 30px;
 	padding-left: 20px;
@@ -63,7 +64,7 @@ a:active {color:#333;}
 /* Formats for SVG Diagrams on webpage
 ====================================== */
 #chart {
-  font: 9px "Univers","Futura","Helvetica","Arial",sans-serif;
+  font: 9px "Univers", "Helvetica", "Arial", "sans-serif";
   padding: 20px 20px 20px 20px;
   position: absolute;
   left: -160%;
@@ -76,11 +77,64 @@ a:active {color:#333;}
 }
 
 #venn {
-	font: 10px: "Univers","Futura","Helvetica","Arial",sans-serif;
+	font: 10px: "Univers", "Helvetica", "Arial", "sans-serif";
  	padding: 0px;
  	/*padding: 10px 0 10px 0;*/
  	margin: 0px;
 }
+
+/* Formats "Career Cluster Transitions A Simpler View"
+====================================================== */
+#dropdown{
+	width: 318px;
+}
+
+#simpleview{
+	font-family: "Lato",sans-serif;
+	font-size: 36px;
+	font-weight: 300;
+	text-align: left;
+	margin: 0px;
+}
+
+.simpleviewtop{
+	padding-top: 25px;
+	padding-left: 30px;
+}
+
+.simpleviewmiddle{
+	padding-left: 0px;
+}
+
+.simpleviewbottom{
+	padding-left: 15px;
+	padding-bottom: 45px;
+}
+
+.simpleviewbig{
+	font-weight: 900;
+}
+
+
+#txtHint{
+	font-family: "Open Sans",sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	padding-left: 8px;
+	margin: 0px;
+}
+
+.clustersub{
+	color: #A4A4A4;
+	text-align:left;
+}
+
+.clustercount{
+	font-family: "Univers", "Helvetica", "Lato", "sans-serif";
+	color: #000;
+	font-size: 28px;
+}
+
 
 /* Formatting for columns
 ========================= */
