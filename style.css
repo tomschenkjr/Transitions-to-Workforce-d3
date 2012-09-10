@@ -28,6 +28,7 @@ a:active {color:#333;}
 	text-decoration: none;
 	border-bottom: none;
 	margin: 0px 5px 0px 5px;
+	color: #333;
 }
 
 #nav a:hover{
@@ -90,7 +91,7 @@ a:active {color:#333;}
 }
 
 #simpleview{
-	font-family: "Lato",sans-serif;
+	font-family: "Univers", "Helvetica", "Lato", "sans-serif";
 	font-size: 36px;
 	font-weight: 300;
 	text-align: left;
@@ -117,7 +118,7 @@ a:active {color:#333;}
 
 
 #txtHint{
-	font-family: "Open Sans",sans-serif;
+	font-family: "Univers", "Helvetica", "Lato", "sans-serif";
 	font-size: 13px;
 	font-weight: 400;
 	padding-left: 8px;
@@ -156,6 +157,10 @@ a:active {color:#333;}
 	top: 875px;
 	font-size:14px;
 	font-weight: bold;
+}
+
+#references a{
+	color: #333;
 }
 
 .footnote{

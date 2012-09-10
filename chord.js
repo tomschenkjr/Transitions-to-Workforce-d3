@@ -45,7 +45,7 @@ var chord = d3.layout.chord()
 var width = 1300,
     height = 910,
     innerRadius = width * .22,
-    outerRadius = innerRadius * 1.05;
+    outerRadius = innerRadius * 1.07;
 
 var fill = d3.scale.ordinal()
     .domain(d3.range(4))
@@ -107,7 +107,7 @@ var label = svg.append("g")
 
 label.append("text")
     .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
-    .attr("dy", ".35em")
+    .attr("dy", ".40em")
     .attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
     .attr("transform", function(d) {
       return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"

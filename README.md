@@ -3,11 +3,14 @@ Introduction
 This is the source code used to create the principal diagram displayed in ["Measuring Transitions into the Workforce as a Form of Accountability"]. 
 The objective of this project is to create an interative web page showing the relationships between community college major and employment. The design is based on a [static poster] created using [Circos] as the primary image. The left side of the diagram represents the various community college majors aggregated by the career clusters. The right side of the diagram represents the two-digit NAICS codes. ["Measuring Transitions into the Workforce as a Form of Accountability"] explains the methodology behind the approach. The main diagram was created using [d3.js] [chord diagram]. You can view the current demo in my [sandbox].
 
+Live Version
+============
+The current version of the diagram is viewable at http://tomschenkjr.net/workforcetransitions/
+
 Requirements
 ============
 
 You will need a web browser with an internet connection to view the output. The browser needs to fully support the Scalable Vector Graphic (SVG) format, including Safari, Chrome, and Firefox. Unfortunately, Internet Explorer (including version 9) is not supported. You do not need to download d3.js library, but do need an internet connection to generate the image.
-
 
 Files
 =====
