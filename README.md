@@ -27,9 +27,9 @@ style.css
 ---------
 The stylesheet for visualizing-transitions.html and chord.js (formats the diagram's labels).
 
-getuser.php
------------
-A PHP script that queries a MySQL table to retrieve information about a particular major. The PHP script is called by a dropdown menu in HTML document.
+data/ folder
+------------
+Contains CSV file that shows individual career cluster transitions.
 
 
 Contact
@@ -38,5 +38,5 @@ You can contact the original author on the GitHub, at tomschenkjr@gmail.com, or 
 
 [d3.js]: http://d3js.org/
 [chord diagram]: http://mbostock.github.com/d3/ex/chord.html
-[sandbox]: http://tomschenkjr.net/sandbox/visualizing-transitions.html
+[sandbox]: http://tomschenkjr.net/workforcetransitions/
 ["Measuring Transitions into the Workforce as a Form of Accountability"]: https://www.airweb.org/EducationAndEvents/Publications/ProfessionalFiles/Documents/irapps32.pdf
